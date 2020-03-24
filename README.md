@@ -1,2 +1,2 @@
-# Lab1
-This should be the lab that uses the Monte Carlo method for calculating pi
+# Labs
+This should be the labs for the parallel programming class
