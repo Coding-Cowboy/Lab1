@@ -1,0 +1,3 @@
+/cygdrive/c/Users/Garro/Documents/Parrallel Programming/lab-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/Garro/Documents/Parrallel Programming/lab-1/cmake-build-debug/CMakeFiles/Lab1_MonteCarlo.dir
+/cygdrive/c/Users/Garro/Documents/Parrallel Programming/lab-1/cmake-build-debug/CMakeFiles/edit_cache.dir
