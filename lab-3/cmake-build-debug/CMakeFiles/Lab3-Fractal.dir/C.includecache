@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Garro/Documents/Parrallel Programming/lab-3/main.c
+math.h
+-
+stdlib.h
+-
+omp.h
+-
+time.h
+-
+stdio.h
+-
+
