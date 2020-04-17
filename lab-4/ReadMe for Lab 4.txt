@@ -1,0 +1,3 @@
+This is some information about lab 4. I attempted to do the quicksort algorithm as was suggested by lab 4 and the final rubric. I do realise that 
+this is not a actual working product for the parallized version but I did want to submit it to get some feedback about it. My thought was that i didn't restructure the partition algorithm 
+enough to solve this issue or that I was making the threads do unnecissary iterations for the partitions. 
