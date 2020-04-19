@@ -17,15 +17,23 @@ long add_serial(const char *numbers) {
 
 long add_parallel(const char *numbers){
     long sum = 0;//global variable
+    int localSum;
     //Found the reference in pg.237-238
-    /*(In my own terms) Pragma will create the max number of threads that it can,
-     * Then the reduction acts as an atomic section for the threads, as to not add the same number twice.*/
-#pragma omp parallel for num_threads(omp_get_max_threads())\
-    reduction(+:sum)
-    for(int i=0; i< 1000000000;i++)//I think i is the local variable in this case???
+    /* each thread calculates the chunksize and then find their individual start and end
+     * From there, threads will run the for loop to calc each thread localSum*/
+#pragma omp parallel num_threads(omp_get_max_threads()) reduction(+:sum)
+    {
+        int chunkSize = Num_To_Add/omp_get_num_threads();
+        int start = omp_get_thread_num() * chunkSize;
+        int end = (omp_get_thread_num() +1) * chunkSize;
+        localSum = 0;//Local variable
+#pragma omp for reduction(+:localSum)
+        for (int i = start; i < end-1; i++)
         {
-            sum+= numbers[i];
+            localSum += numbers[i];
         }
+        sum+= localSum;
+    }
     return sum;
 }
 
